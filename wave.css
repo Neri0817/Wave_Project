@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.logo::before {
+  content: "";
+  background: url("https://p.kindpng.com/picc/s/219-2192903_wave-tattoo-png-transparent-japanese-wave-png-png.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-color: rgb(246, 246, 246, 0.9);
+  bottom: 0;
+  left: -50%;
+  border-radius: 30%;
+  animation: waves 5s ease-in-out alternate infinite;
+}
+
+@keyframes waves {
+  to {
+    transform: translateY(-50%) rotate(540deg);
+  }
+}
